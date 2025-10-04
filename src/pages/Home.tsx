@@ -46,7 +46,7 @@ const Home: React.FC = () => {
         <div className="relative w-full">
           {/* Image */}
           <img
-            src="/home.png"
+            src="/home.svg"
             alt="Hero background"
             className="w-full h-auto rounded-2xl"
           />
@@ -109,7 +109,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
             >
               Services We Offer
             </motion.h2>
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto"
             >
               Comprehensive solutions to transform your business with cutting-edge technology and strategic innovation.
             </motion.p>
@@ -310,10 +310,10 @@ const Home: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="flex-shrink-0 w-[42rem] h-[28rem] rounded-2xl p-10 bg-transparent backdrop-blur-sm flex flex-col justify-center"
             >
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Accelerate your Performance with our solutions
               </h2>
-              <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed max-w-3xl">
+              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
                 Discover cutting-edge solutions that drive innovation and transform your business operations. From AI-powered fintech to smart HR systems, we deliver the tools you need to stay ahead.
               </p>
             </motion.div>
@@ -329,7 +329,8 @@ const Home: React.FC = () => {
                 AI Powered Fintech Solutions
               </h3>
               <Link
-                to="/solutions/fintech"
+                to="/products"
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-finnitt-teal font-semibold hover:text-finnitt-cyan transition-colors duration-200"
               >
                 Read more
@@ -350,7 +351,8 @@ const Home: React.FC = () => {
                 GenAI Solutions
               </h3>
               <Link
-                to="/solutions/genai"
+                to="/products"
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-finnitt-teal font-semibold hover:text-finnitt-cyan transition-colors duration-200"
               >
                 Read more
@@ -371,7 +373,8 @@ const Home: React.FC = () => {
                 Agent Based Solutions
               </h3>
               <Link
-                to="/solutions/agents"
+                to="/products"
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-finnitt-teal font-semibold hover:text-finnitt-cyan transition-colors duration-200"
               >
                 Read more
@@ -392,7 +395,8 @@ const Home: React.FC = () => {
                 Smart HR Solutions
               </h3>
               <Link
-                to="/solutions/hr"
+                to="/products"
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-finnitt-teal font-semibold hover:text-finnitt-cyan transition-colors duration-200"
               >
                 Read more
@@ -413,7 +417,8 @@ const Home: React.FC = () => {
                 Explore More
               </h3>
               <Link
-                to="/solutions"
+                to="/products"
+                onClick={() => window.scrollTo(0, 0)}
                 className="text-finnitt-teal text-xl font-semibold hover:text-finnitt-cyan transition-colors duration-200"
               >
                 Discover all solutions
@@ -462,7 +467,7 @@ const Home: React.FC = () => {
             <div className="mb-4">
               <span className="text-sm font-semibold uppercase tracking-wider text-gray-500">TESTIMONIALS</span>
             </div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               What Customers Are Saying
             </h2>
           </div>
@@ -567,7 +572,7 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight"
+                className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight"
               >
                 See how we can help you
               </motion.h2>
@@ -576,9 +581,9 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
+                className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
               >
-                We support both businesses and individuals with ready-to-use, customizable solutions. We’re more than happy to discuss your goals and tailor the right approach for you.
+                We support both businesses and individuals with ready-to-use, customizable solutions. We're more than happy to discuss your goals and tailor the right approach for you.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 24 }}

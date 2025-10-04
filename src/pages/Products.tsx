@@ -11,17 +11,17 @@ const Products: React.FC = () => {
       solutions: [
         {
           title: 'Anti Money Laundering Software',
-          image: '/digital.png',
+          image: '/B-antimoneylaundering.svg',
           description: 'AI-based fraud and money laundering detection system that monitors transactions in real-time, identifies suspicious patterns, and generates automated compliance reports. Protect your institution with intelligent risk scoring and behavioral analysis.'
         },
         {
           title: 'Risk Assessment & Analytics',
-          image: '/ai.png',
+          image: '/C-riskanalytics.svg',
           description: 'Leverage advanced AI algorithms to assess credit risk, detect anomalies, and predict market trends. Make data-driven decisions with comprehensive analytics and real-time risk scoring capabilities.'
         },
         {
           title: 'Regulatory Compliance Automation',
-          image: '/ui.png',
+          image: '/A-compliance.svg',
           description: 'Stay compliant effortlessly with automated regulatory reporting, KYC/AML screening, and audit trail management. Our solution adapts to changing regulations and reduces compliance overhead.'
         }
       ]
@@ -31,12 +31,12 @@ const Products: React.FC = () => {
       solutions: [
         {
           title: 'AI Lead Generation System',
-          image: '/digital.png',
+          image: '/D-leadgeneration.svg',
           description: 'End-to-end AI agent system that automates your entire lead generation pipeline. Our intelligent agents research and identify ideal prospects, enrich contact data with verified information, qualify leads based on your criteria, and execute personalized outreach campaigns across multiple channels. From discovery to first contact, let AI handle the heavy lifting while your team focuses on closing deals.'
         },
         {
           title: 'Social Media Marketing Automation',
-          image: '/ai.png',
+          image: '/E-socialmediamanager.svg',
           description: 'Complete AI-powered social media solution that handles content creation, scheduling, and posting across all platforms. Our system generates engaging posts, graphics, and captions tailored to your brand voice, optimizes posting times for maximum reach, and monitors performance metrics. Transform your social presence with consistent, high-quality content that resonates with your audience—all automated from start to finish.'
         }
       ]
@@ -46,17 +46,17 @@ const Products: React.FC = () => {
       solutions: [
         {
           title: 'AI Chatbot Platform',
-          image: '/digital.png',
+          image: '/F-customersupport.svg',
           description: 'Deliver exceptional 24/7 customer support with our intelligent chatbot platform. Powered by advanced natural language processing, our AI understands customer intent, provides accurate solutions, and maintains conversational context across interactions. The system handles everything from simple FAQs to complex troubleshooting, and intelligently escalates to human agents when needed—complete with full conversation history and sentiment analysis for seamless handoffs.'
         },
         {
           title: 'Ticket Management Automation',
-          image: '/ai.png',
+          image: '/G-ticketautomation.svg',
           description: 'Transform your support operations with intelligent ticket automation that eliminates manual triage and routing. Our AI automatically categorizes incoming requests, assigns priority levels based on urgency and impact, and routes tickets to the most qualified team members. The system learns from resolution patterns to suggest solutions, tracks SLA compliance, and provides real-time insights into team performance and bottlenecks—reducing response times by up to 70%.'
         },
         {
           title: 'Knowledge Base AI Assistant',
-          image: '/ui.png',
+          image: '/H-knowldgebase.svg',
           description: 'Turn your documentation into an intelligent, self-learning support system that grows smarter with every interaction. Our AI assistant understands natural language queries, provides contextually relevant answers with source citations, and identifies knowledge gaps in your documentation. It integrates seamlessly with your existing help center, learns from customer feedback, and automatically suggests article updates based on common questions—empowering customers to find solutions instantly while reducing support volume.'
         }
       ]
@@ -66,7 +66,7 @@ const Products: React.FC = () => {
       solutions: [
         {
           title: 'Employee Training System',
-          image: '/digital.png',
+          image: '/I-hrtraining.svg',
           description: 'Comprehensive AI-powered training platform that revolutionizes employee development through personalized learning paths. Our system features modular course structures with interactive lessons, AI-generated explanations tailored to individual learning styles, and adaptive assessments that adjust difficulty based on performance. The platform includes automated grading, detailed progress tracking, certification management, and intelligent recommendations for skill development. Whether onboarding new hires or upskilling your team, our AI ensures every employee gets the training they need, when they need it.'
         }
       ]
@@ -81,7 +81,7 @@ const Products: React.FC = () => {
         <div className="relative w-full">
           {/* Image */}
           <img
-            src="/solutions.png"
+            src="/solutions.svg"
             alt="Solutions"
             className="w-full h-auto rounded-2xl"
           />
@@ -152,7 +152,7 @@ const Products: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900"
             >
               Our Offerings
             </motion.h2>
@@ -240,7 +240,7 @@ const Products: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold text-white leading-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
             >
               Why Finnitt
             </motion.h2>
@@ -373,7 +373,7 @@ const Products: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight"
+                className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight"
               >
                 Ready to accelerate with AI?
               </motion.h2>
@@ -382,7 +382,7 @@ const Products: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
+                className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
               >
                 Discover how our AI-powered solutions can transform your operations, reduce costs, and drive growth. Request a demo to see our platforms in action.
               </motion.p>

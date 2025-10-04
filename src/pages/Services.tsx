@@ -44,7 +44,7 @@ const Services: React.FC = () => {
         <div className="relative w-full">
           {/* Image */}
           <img
-            src="/services.png"
+            src="/services.svg"
             alt="Services"
             className="w-full h-auto rounded-2xl"
           />
@@ -102,7 +102,7 @@ const Services: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900"
             >
               What We Offer
             </motion.h2>
@@ -164,7 +164,7 @@ const Services: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold text-white leading-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
             >
               Why Finnitt
             </motion.h2>
@@ -297,7 +297,7 @@ const Services: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight"
+                className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight"
               >
                 Ready to transform your business?
               </motion.h2>
@@ -306,7 +306,7 @@ const Services: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
+                className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
               >
                 Let's discuss how our services can accelerate your digital transformation and drive measurable growth for your business.
               </motion.p>

@@ -70,13 +70,13 @@ const About: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ amount: 0.2 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Our Mission
               </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
                 We transform businesses through AI-powered solutions while staying committed to ethics, transparency, and human values. Every solution we build prioritizes data privacy and accountability, ensuring AI empowers teams and drives meaningful innovation.
               </p>
             </motion.div>
@@ -85,7 +85,7 @@ const About: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ amount: 0.2 }}
               transition={{ duration: 0.8 }}
               className="flex justify-end"
             >
@@ -125,10 +125,10 @@ const About: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Our Work
               </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
                 We've partnered with businesses across industries—from fintech startups to established enterprises—helping them unlock new opportunities through intelligent automation. Our clients have seen measurable improvements in efficiency, customer satisfaction, and competitive advantage.
               </p>
               <motion.button
@@ -153,7 +153,7 @@ const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-6xl font-bold text-white leading-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
             >
               Our Values
             </motion.h2>
@@ -282,7 +282,7 @@ const About: React.FC = () => {
             <div className="mb-4">
               <span className="text-sm font-semibold uppercase tracking-wider text-gray-500">TESTIMONIALS</span>
             </div>
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
               What Customers Are Saying
             </h2>
           </div>
@@ -388,10 +388,10 @@ const About: React.FC = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
                 Careers
               </h2>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
                 We're looking for talented individuals who think outside the box and are passionate about using AI to solve real-world problems. Join a team that values creativity, collaboration, and continuous learning while working on cutting-edge projects.
               </p>
               <motion.button
