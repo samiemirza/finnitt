@@ -76,24 +76,24 @@ const Products: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section (single image with title and description) */}
-      <section className="relative flex items-center pt-20 bg-gray-50">
+      <section className="relative flex items-center pt-16 md:pt-20 bg-gray-50">
         {/* Image Wrapper */}
         <div className="relative w-full">
           {/* Image */}
           <img
             src="/solutions.svg"
             alt="Solutions"
-            className="w-full h-auto rounded-2xl"
+            className="w-full h-auto rounded-2xl hidden md:block"
           />
           {/* Content */}
-          <div className="absolute inset-0">
-            <div className="max-w-9xl mx-auto h-full px-16 flex items-center justify-start">
-              <div className="max-w-3xl py-16 -mt-56">
+          <div className="md:absolute md:inset-0">
+            <div className="max-w-9xl mx-auto h-full px-4 sm:px-6 lg:px-16 flex items-center justify-start">
+              <div className="max-w-3xl py-8 md:py-16 md:-mt-56">
                 <motion.h1
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
                 >
                   AI-Powered Solutions
                 </motion.h1>
@@ -101,7 +101,7 @@ const Products: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-[40rem]"
+                  className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-[40rem]"
                 >
                   Purpose-built, production-ready solutions that help you move faster—
                   from automation and intelligent agents to analytics and risk systems.
@@ -110,20 +110,20 @@ const Products: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="flex flex-col sm:flex-row gap-4"
+                  className="flex flex-col sm:flex-row gap-3 sm:gap-4"
                 >
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
-                    className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2 group"
+                    className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2 group"
                   >
                     <span>Explore</span>
                     <div className="group-hover:translate-y-1 transition-transform duration-200">
                       <ArrowDown size={20} />
                     </div>
                   </motion.button>
-                  
+
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
@@ -131,7 +131,7 @@ const Products: React.FC = () => {
                       // Add your demo request logic here
                       console.log('Request demo clicked');
                     }}
-                    className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2 group border-2 border-gray-200 hover:border-gray-300"
+                    className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2 group border-2 border-gray-200 hover:border-gray-300"
                   >
                     <Calendar size={20} />
                     <span>Request Demo</span>
@@ -144,30 +144,30 @@ const Products: React.FC = () => {
       </section>
 
       {/* Our Industries Section */}
-      <section className="pt-24 pb-36 bg-white">
-        <div className="max-w-9xl mx-auto px-16">
-          <div className="text-center mb-20">
+      <section className="pt-12 md:pt-24 pb-16 md:pb-36 bg-white">
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="text-center mb-10 md:mb-20">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900"
             >
               Our Offerings
             </motion.h2>
           </div>
 
           {/* Category Tabs */}
-          <div className="relative mb-16">
-            <div className="flex justify-center gap-8">
+          <div className="relative mb-10 md:mb-16">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
               {Object.entries(categories).map(([key, category]) => (
                 <button
                   key={key}
                   onClick={() => setActiveCategory(key)}
-                  className="relative pb-3 transition-all duration-300 group"
+                  className="relative pb-2 md:pb-3 transition-all duration-300 group"
                 >
-                  <span className={`text-lg transition-all duration-300 ${
+                  <span className={`text-sm sm:text-base md:text-lg transition-all duration-300 ${
                     activeCategory === key
                       ? 'font-bold text-gray-900'
                       : 'font-normal text-gray-400 group-hover:text-gray-600'
@@ -176,7 +176,7 @@ const Products: React.FC = () => {
                   </span>
                   <div className={`absolute bottom-0 left-0 right-0 transition-all duration-300 ${
                     activeCategory === key
-                      ? 'h-1 bg-gradient-to-r from-finnitt-teal to-finnitt-cyan'
+                      ? 'h-0.5 md:h-1 bg-gradient-to-r from-finnitt-teal to-finnitt-cyan'
                       : 'h-0.5 bg-transparent'
                   }`}></div>
                 </button>
@@ -193,7 +193,7 @@ const Products: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
               {categories[activeCategory as keyof typeof categories].solutions.map((item, idx) => (
                 <motion.div
                   key={item.title}
@@ -208,16 +208,16 @@ const Products: React.FC = () => {
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-64 md:h-80 object-contain"
+                      className="w-full h-48 sm:h-56 md:h-64 lg:h-80 object-contain"
                       width={1920}
                       height={1080}
                     />
                   </div>
 
                   {/* Floating content card */}
-                  <div className="relative -mt-12 md:-mt-16 px-6 pb-6">
-                    <div className={"bg-white/90 backdrop-blur-sm rounded-xl p-6 shadow-md border border-white/60"}>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">{item.title}</h3>
+                  <div className="relative -mt-8 md:-mt-12 lg:-mt-16 px-4 sm:px-6 pb-4 sm:pb-6">
+                    <div className={"bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-md border border-white/60"}>
+                      <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 md:mb-3">{item.title}</h3>
                       <p className="text-gray-700 leading-relaxed text-sm md:text-base">
                         {item.description}
                       </p>
@@ -231,16 +231,16 @@ const Products: React.FC = () => {
       </section>
 
       {/* Why Finnitt Section */}
-      <section className="py-24 relative overflow-hidden" style={{ backgroundColor: '#0097B2' }}>
-        <div className="relative max-w-9xl mx-auto px-16">
+      <section className="py-12 md:py-24 relative overflow-hidden" style={{ backgroundColor: '#0097B2' }}>
+        <div className="relative max-w-9xl mx-auto px-4 sm:px-6 lg:px-16">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight"
             >
               Why Finnitt
             </motion.h2>
@@ -249,18 +249,18 @@ const Products: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: 0.05 }}
-              className="text-lg md:text-xl text-white/90 mt-4 max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-white/90 mt-3 md:mt-4 max-w-3xl mx-auto"
             >
               Discover what makes us different and how we can transform your business.
             </motion.p>
           </div>
 
           {/* 2x3 Grid of Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Card 1 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[360px]">
-              <div className="mb-6 flex items-center justify-center min-h-[140px]">
-                <div className="w-20 h-20 rounded-full overflow-hidden">
+            <div className="group bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[320px] md:min-h-[360px]">
+              <div className="mb-4 md:mb-6 flex items-center justify-center min-h-[100px] md:min-h-[140px]">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
                   <img
                     src="/1.png"
                     alt="Specialized for Fintech"
@@ -268,16 +268,16 @@ const Products: React.FC = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-4">Specialized for Fintech & Growth Businesses</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 text-center mb-3 md:mb-4">Specialized for Fintech & Growth Businesses</h3>
               <p className="text-gray-600 text-sm leading-relaxed text-center">
                 We know the pain points—regulations, security, scaling, and customer trust. Our services are built around solving the challenges that matter most to financial innovators.
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="mb-6 flex items-center justify-center min-h-[140px]">
-                <div className="w-20 h-20 rounded-full overflow-hidden">
+            <div className="group bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[320px] md:min-h-[360px]">
+              <div className="mb-4 md:mb-6 flex items-center justify-center min-h-[100px] md:min-h-[140px]">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
                   <img
                     src="/2.png"
                     alt="Strategic Advisors"
@@ -285,16 +285,16 @@ const Products: React.FC = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-4">Strategic Advisors, Not Just Developers</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 text-center mb-3 md:mb-4">Strategic Advisors, Not Just Developers</h3>
               <p className="text-gray-600 text-sm leading-relaxed text-center">
                 We don't just deliver code or designs. We help you make the right technology decisions—when to adopt AI, where to automate, and how to modernize—so you invest wisely.
               </p>
             </div>
 
             {/* Card 3 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[360px]">
-              <div className="mb-6 flex items-center justify-center min-h-[140px]">
-                <div className="w-20 h-20 rounded-full overflow-hidden">
+            <div className="group bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[320px] md:min-h-[360px]">
+              <div className="mb-4 md:mb-6 flex items-center justify-center min-h-[100px] md:min-h-[140px]">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
                   <img
                     src="/3.png"
                     alt="End-to-End Capability"
@@ -302,16 +302,16 @@ const Products: React.FC = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-4">End-to-End Capability</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 text-center mb-3 md:mb-4">End-to-End Capability</h3>
               <p className="text-gray-600 text-sm leading-relaxed text-center">
                 From branding and UX to custom systems, AI integration, and compliance-ready automation—we bring every layer of expertise under one roof, saving you the hassle of managing multiple vendors.
               </p>
             </div>
 
             {/* Card 4 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[360px]">
-              <div className="mb-6 flex items-center justify-center min-h-[140px]">
-                <div className="w-20 h-20 rounded-full overflow-hidden">
+            <div className="group bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[320px] md:min-h-[360px]">
+              <div className="mb-4 md:mb-6 flex items-center justify-center min-h-[100px] md:min-h-[140px]">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
                   <img
                     src="/4.png"
                     alt="Proven Balance of Speed & Quality"
@@ -319,16 +319,16 @@ const Products: React.FC = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-4">Proven Balance of Speed & Quality</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 text-center mb-3 md:mb-4">Proven Balance of Speed & Quality</h3>
               <p className="text-gray-600 text-sm leading-relaxed text-center">
                 Our off-the-shelf solutions give you immediate wins, while our consultancy ensures long-term scalability and future-proof growth. You get results now without compromising tomorrow.
               </p>
             </div>
 
             {/* Card 5 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[360px]">
-              <div className="mb-6 flex items-center justify-center min-h-[140px]">
-                <div className="w-20 h-20 rounded-full overflow-hidden">
+            <div className="group bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[320px] md:min-h-[360px]">
+              <div className="mb-4 md:mb-6 flex items-center justify-center min-h-[100px] md:min-h-[140px]">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
                   <img
                     src="/5.png"
                     alt="Human-Centered, Tech-Driven"
@@ -336,16 +336,16 @@ const Products: React.FC = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-4">Human-Centered, Tech-Driven</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 text-center mb-3 md:mb-4">Human-Centered, Tech-Driven</h3>
               <p className="text-gray-600 text-sm leading-relaxed text-center">
                 We design around people—your customers, your employees, and your regulators—so every solution is intuitive, secure, and built for real-world adoption.
               </p>
             </div>
 
             {/* Card 6 */}
-            <div className="group bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[360px]">
-              <div className="mb-6 flex items-center justify-center min-h-[140px]">
-                <div className="w-20 h-20 rounded-full overflow-hidden">
+            <div className="group bg-white rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 min-h-[320px] md:min-h-[360px]">
+              <div className="mb-4 md:mb-6 flex items-center justify-center min-h-[100px] md:min-h-[140px]">
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden">
                   <img
                     src="/6.png"
                     alt="Committed to Measurable Impact"
@@ -353,7 +353,7 @@ const Products: React.FC = () => {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 text-center mb-4">Committed to Measurable Impact</h3>
+              <h3 className="text-lg md:text-xl font-bold text-gray-900 text-center mb-3 md:mb-4">Committed to Measurable Impact</h3>
               <p className="text-gray-600 text-sm leading-relaxed text-center">
                 For us, success means efficiency gained, risks reduced, and growth enabled. If it doesn't move the needle for your business, we don't count it as done.
               </p>
@@ -363,9 +363,9 @@ const Products: React.FC = () => {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-9xl mx-auto px-16">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+      <section className="py-16 md:py-32 bg-white">
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
             {/* Left: Title and CTA */}
             <div className="flex-1">
               <motion.h2
@@ -373,7 +373,7 @@ const Products: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight"
               >
                 Ready to accelerate with AI?
               </motion.h2>
@@ -382,7 +382,7 @@ const Products: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
+                className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-3xl"
               >
                 Discover how our AI-powered solutions can transform your operations, reduce costs, and drive growth. Request a demo to see our platforms in action.
               </motion.p>
@@ -394,7 +394,7 @@ const Products: React.FC = () => {
               >
                 <button
                   type="button"
-                  className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2 group"
+                  className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2 group"
                 >
                   <span>Request a Demo</span>
                   <div className="group-hover:translate-x-1 transition-transform duration-200">
@@ -415,7 +415,7 @@ const Products: React.FC = () => {
               <img
                 src="/finnitt_transparent.png"
                 alt="Finnitt transparent logo"
-                className="w-full max-w-md h-auto object-contain"
+                className="w-full max-w-xs sm:max-w-md h-auto object-contain"
               />
             </motion.div>
           </div>

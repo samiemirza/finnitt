@@ -48,17 +48,17 @@ const Home: React.FC = () => {
           <img
             src="/home.svg"
             alt="Hero background"
-            className="w-full h-auto rounded-2xl"
+            className="w-full h-auto rounded-2xl hidden md:block"
           />
           {/* Content */}
-          <div className="absolute inset-0">
-            <div className="max-w-9xl mx-auto h-full px-16 flex items-center justify-start">
-              <div className="max-w-3xl py-16 -mt-24">
+          <div className="md:absolute md:inset-0">
+            <div className="max-w-9xl mx-auto h-full px-4 sm:px-6 lg:px-16 flex items-center justify-start">
+              <div className="max-w-3xl py-8 md:py-16 md:-mt-24">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+                className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
               >
                 Building AI-first Businesses
               </motion.h1>
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-[40rem]"
+                className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 md:mb-8 leading-relaxed"
               >
                 Transform your business with cutting-edge AI solutions. We help companies leverage
                 artificial intelligence to drive innovation, optimize operations, and create competitive advantages.
@@ -82,7 +82,7 @@ const Home: React.FC = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2 group"
+                    className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2 group"
                   >
                     <span>Get to know Finnitt</span>
                     <div className="group-hover:translate-x-1 transition-transform duration-200">
@@ -101,15 +101,15 @@ const Home: React.FC = () => {
       
 
       {/* Services Section */}
-      <section className="pt-32 pb-20 bg-gray-50">
-        <div className="max-w-9xl mx-auto">
+      <section className="pt-16 md:pt-32 pb-12 md:pb-20 bg-gray-50">
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="mb-16 text-center">
+          <div className="mb-12 md:mb-16 text-center">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+              className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight"
             >
               Services We Offer
             </motion.h2>
@@ -117,14 +117,14 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto px-4"
             >
               Comprehensive solutions to transform your business with cutting-edge technology and strategic innovation.
             </motion.p>
           </div>
 
           {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {/* Digital Transformation */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -290,30 +290,30 @@ const Home: React.FC = () => {
       </section>
 
       {/* Solutions Section – single large carousel */}
-      <section className="pt-32 pb-20" style={{ backgroundColor: '#0097B2' }}>
-        <div className="max-w-9xl mx-auto px-16 relative">
+      <section className="pt-16 md:pt-32 pb-12 md:pb-20" style={{ backgroundColor: '#0097B2' }}>
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-16 relative">
           {/* Section eyebrow above carousel */}
           <div className="mb-6">
-            <span className="text-sm font-semibold uppercase tracking-wider text-white">
+            <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-white">
               FEATURED SOLUTIONS
             </span>
           </div>
           {/* Carousel track */}
           <div
             id="solutions-carousel"
-            className="flex space-x-8 overflow-x-auto pt-16 pb-24 scrollbar-hide"
+            className="flex space-x-4 sm:space-x-8 overflow-x-auto pt-8 md:pt-16 pb-16 md:pb-24 scrollbar-hide touch-pan-x"
           >
             {/* Card 0: Transparent intro card holding the title and text */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex-shrink-0 w-[42rem] h-[28rem] rounded-2xl p-10 bg-transparent backdrop-blur-sm flex flex-col justify-center"
+              className="flex-shrink-0 w-[85vw] sm:w-[28rem] md:w-[36rem] lg:w-[42rem] h-auto min-h-[24rem] md:h-[28rem] rounded-2xl p-6 sm:p-8 md:p-10 bg-transparent backdrop-blur-sm flex flex-col justify-center"
             >
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
                 Accelerate your Performance with our solutions
               </h2>
-              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
+              <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed">
                 Discover cutting-edge solutions that drive innovation and transform your business operations. From AI-powered fintech to smart HR systems, we deliver the tools you need to stay ahead.
               </p>
             </motion.div>
@@ -323,7 +323,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              className="flex-shrink-0 w-[42rem] h-[28rem] bg-white rounded-2xl shadow-xl p-10 flex flex-col"
+              className="flex-shrink-0 w-[85vw] sm:w-[28rem] md:w-[36rem] lg:w-[42rem] h-auto min-h-[24rem] md:h-[28rem] bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 flex flex-col"
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                 AI Powered Fintech Solutions
@@ -336,7 +336,7 @@ const Home: React.FC = () => {
                 Read more
               </Link>
               <div className="mt-6 flex-1 bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-                <img src="/1.svg" alt="AI Powered Fintech" className="w-[588px] h-[280px] object-contain" />
+                <img src="/1.svg" alt="AI Powered Fintech" className="w-full h-auto max-w-[588px] max-h-[280px] object-contain" />
               </div>
             </motion.div>
 
@@ -345,7 +345,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex-shrink-0 w-[42rem] h-[28rem] bg-white rounded-2xl shadow-xl p-10 flex flex-col"
+              className="flex-shrink-0 w-[85vw] sm:w-[28rem] md:w-[36rem] lg:w-[42rem] h-auto min-h-[24rem] md:h-[28rem] bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 flex flex-col"
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                 GenAI Solutions
@@ -358,7 +358,7 @@ const Home: React.FC = () => {
                 Read more
               </Link>
               <div className="mt-6 flex-1 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
-                <img src="/2.svg" alt="GenAI Solutions" className="w-[588px] h-[280px] object-contain" />
+                <img src="/2.svg" alt="GenAI Solutions" className="w-full h-auto max-w-[588px] max-h-[280px] object-contain" />
               </div>
             </motion.div>
 
@@ -367,7 +367,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="flex-shrink-0 w-[42rem] h-[28rem] bg-white rounded-2xl shadow-xl p-10 flex flex-col"
+              className="flex-shrink-0 w-[85vw] sm:w-[28rem] md:w-[36rem] lg:w-[42rem] h-auto min-h-[24rem] md:h-[28rem] bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 flex flex-col"
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                 Agent Based Solutions
@@ -380,7 +380,7 @@ const Home: React.FC = () => {
                 Read more
               </Link>
               <div className="mt-6 flex-1 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
-                <img src="/3.svg" alt="Agent Based Solutions" className="w-[588px] h-[280px] object-contain" />
+                <img src="/3.svg" alt="Agent Based Solutions" className="w-full h-auto max-w-[588px] max-h-[280px] object-contain" />
               </div>
             </motion.div>
 
@@ -389,7 +389,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex-shrink-0 w-[42rem] h-[28rem] bg-white rounded-2xl shadow-xl p-10 flex flex-col"
+              className="flex-shrink-0 w-[85vw] sm:w-[28rem] md:w-[36rem] lg:w-[42rem] h-auto min-h-[24rem] md:h-[28rem] bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 flex flex-col"
             >
               <h3 className="text-xl font-semibold text-gray-900 mb-4 leading-tight">
                 Smart HR Solutions
@@ -402,7 +402,7 @@ const Home: React.FC = () => {
                 Read more
               </Link>
               <div className="mt-6 flex-1 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center">
-                <img src="/4.svg" alt="Smart HR Solutions" className="w-[588px] h-[280px] object-contain" />
+                <img src="/4.svg" alt="Smart HR Solutions" className="w-full h-auto max-w-[588px] max-h-[280px] object-contain" />
               </div>
             </motion.div>
 
@@ -411,7 +411,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex-shrink-0 w-[42rem] h-[28rem] bg-white rounded-2xl shadow-xl p-10 flex flex-col items-center justify-center text-center"
+              className="flex-shrink-0 w-[85vw] sm:w-[28rem] md:w-[36rem] lg:w-[42rem] h-auto min-h-[24rem] md:h-[28rem] bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10 flex flex-col items-center justify-center text-center"
             >
               <h3 className="text-3xl font-semibold text-gray-900 mb-6 leading-tight text-center">
                 Explore More
@@ -461,26 +461,26 @@ const Home: React.FC = () => {
       </section>
 
       {/* Section 4: Testimonials */}
-      <section className="pt-48 pb-48" style={{ backgroundColor: '#F3FAFD' }}>
-        <div className="max-w-9xl mx-auto px-16">
+      <section className="pt-24 md:pt-48 pb-24 md:pb-48" style={{ backgroundColor: '#F3FAFD' }}>
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-16">
           <div className="text-center">
             <div className="mb-4">
-              <span className="text-sm font-semibold uppercase tracking-wider text-gray-500">TESTIMONIALS</span>
+              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-500">TESTIMONIALS</span>
             </div>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight px-4">
               What Customers Are Saying
             </h2>
           </div>
 
           {/* Centered carousel with preview cards */}
-          <div className="relative max-w-7xl mx-auto mt-16 h-[30rem] overflow-hidden">
+          <div className="relative max-w-7xl mx-auto mt-12 md:mt-16 h-[22rem] sm:h-[26rem] md:h-[30rem] overflow-hidden">
             {/* Left preview (previous) */}
             <motion.div
               key={`left-${prevTestimonialIndex}`}
               initial={{ opacity: 0, scale: 0.9, x: -40 }}
               animate={{ opacity: 0.6, scale: 0.92, x: 0 }}
               transition={{ duration: 0.45 }}
-              className="absolute left-0 top-1/2 -translate-y-[54%] -translate-x-[55%] w-[32rem] h-[18rem] bg-white rounded-2xl shadow-xl p-6 flex flex-col justify-center text-center z-10 pointer-events-none"
+              className="hidden lg:flex absolute left-0 top-1/2 -translate-y-[54%] -translate-x-[55%] w-[32rem] h-[18rem] bg-white rounded-2xl shadow-xl p-6 flex-col justify-center text-center z-10 pointer-events-none"
             >
               <div className="mx-auto mb-3 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                 <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -494,23 +494,23 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* Center card (active) */}
-            <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+            <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none px-4">
               <motion.div
                 key={`center-${activeTestimonial}`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.45 }}
-                className="w-[46rem] h-[20rem] bg-white rounded-2xl shadow-2xl p-10 flex flex-col justify-center text-center"
+                className="w-full max-w-[46rem] h-auto min-h-[18rem] sm:h-[20rem] bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col justify-center text-center"
               >
-                <div className="mx-auto mb-5 w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <div className="mx-auto mb-4 md:mb-5 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center">
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h.01M15 12h.01M7 20h10a2 2 0 002-2V6a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <p className="text-gray-800 text-lg leading-relaxed max-w-3xl mx-auto">
+                <p className="text-gray-800 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
                   {testimonials[activeTestimonial].quote}
                 </p>
-                <div className="mt-4 text-sm font-semibold text-gray-600">
+                <div className="mt-3 md:mt-4 text-xs sm:text-sm font-semibold text-gray-600">
                   {testimonials[activeTestimonial].author}
                 </div>
               </motion.div>
@@ -522,7 +522,7 @@ const Home: React.FC = () => {
               initial={{ opacity: 0, scale: 0.9, x: 40 }}
               animate={{ opacity: 0.6, scale: 0.92, x: 0 }}
               transition={{ duration: 0.45 }}
-              className="absolute right-0 top-1/2 -translate-y-[54%] translate-x-[55%] w-[32rem] h-[18rem] bg-white rounded-2xl shadow-xl p-6 flex flex-col justify-center text-center z-10 pointer-events-none"
+              className="hidden lg:flex absolute right-0 top-1/2 -translate-y-[54%] translate-x-[55%] w-[32rem] h-[18rem] bg-white rounded-2xl shadow-xl p-6 flex-col justify-center text-center z-10 pointer-events-none"
             >
               <div className="mx-auto mb-3 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                 <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -536,43 +536,43 @@ const Home: React.FC = () => {
             </motion.div>
 
             {/* Nav arrows */}
-            <div className="absolute left-6 top-1/2 -translate-y-1/2 z-30">
+            <div className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-30">
               <motion.button
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)}
-                className="w-16 h-16 rounded-full shadow-xl flex items-center justify-center hover:shadow-2xl"
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-xl flex items-center justify-center hover:shadow-2xl"
                 style={{ backgroundColor: '#0097B2' }}
               >
-                <ChevronLeft className="text-white" />
+                <ChevronLeft className="text-white" fontSize="small" />
               </motion.button>
             </div>
-            <div className="absolute right-6 top-1/2 -translate-y-1/2 z-30">
+            <div className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30">
               <motion.button
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveTestimonial(prev => (prev + 1) % testimonials.length)}
-                className="w-16 h-16 rounded-full shadow-xl flex items-center justify-center hover:shadow-2xl"
+                className="w-12 h-12 sm:w-16 sm:h-16 rounded-full shadow-xl flex items-center justify-center hover:shadow-2xl"
                 style={{ backgroundColor: '#0097B2' }}
               >
-                <ChevronRight className="text-white" />
+                <ChevronRight className="text-white" fontSize="small" />
               </motion.button>
             </div>
           </div>
         </div>
       </section>
       {/* Section 5: See how we can help you (below testimonials) */}
-      <section className="py-24 bg-white">
-        <div className="max-w-9xl mx-auto px-16">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-16">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8 md:gap-12">
             {/* Left: Title and CTA */}
-            <div className="flex-1">
+            <div className="flex-1 text-center lg:text-left">
               <motion.h2
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6 }}
-                className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-tight"
+                className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 md:mb-8 leading-tight"
               >
                 See how we can help you
               </motion.h2>
@@ -581,7 +581,7 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.05 }}
-                className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl"
+                className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 leading-relaxed max-w-3xl mx-auto lg:mx-0"
               >
                 We support both businesses and individuals with ready-to-use, customizable solutions. We're more than happy to discuss your goals and tailor the right approach for you.
               </motion.p>
@@ -590,10 +590,11 @@ const Home: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
+                className="flex justify-center lg:justify-start"
               >
                 <button
                   type="button"
-                  className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2 group"
+                  className="bg-gradient-to-r from-finnitt-teal to-finnitt-cyan text-white px-6 py-3 md:px-8 md:py-4 rounded-lg font-semibold text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center space-x-2 group"
                 >
                   <span>Contact us</span>
                   <div className="group-hover:translate-x-1 transition-transform duration-200">
@@ -609,12 +610,12 @@ const Home: React.FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6 }}
-              className="flex-1 w-full flex items-center justify-center lg:justify-end"
+              className="flex-1 w-full flex items-center justify-center lg:justify-end mt-8 lg:mt-0"
             >
               <img
                 src="/finnitt_transparent.png"
                 alt="Finnitt transparent logo"
-                className="w-full max-w-md h-auto object-contain"
+                className="w-full max-w-xs sm:max-w-md h-auto object-contain"
               />
             </motion.div>
           </div>
