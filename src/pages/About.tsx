@@ -1,33 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from '@mui/icons-material';
 
 const About: React.FC = () => {
-  const testimonials = [
-    {
-      title: 'Consulting',
-      quote:
-        'Finnitt\'s consulting team embedded seamlessly into our operations. They brought innovative solutions, challenged assumptions, and helped us move faster with confidence.',
-      author: 'Alex Carter | COO, Northwind Industries',
-    },
-    {
-      title: 'AI Agents – Lead Generation',
-      quote:
-        'The AI agents consistently qualified inbound interest and booked meetings while we slept. Conversion rates improved and our pipeline became more predictable.',
-      author: 'Jordan Lee | VP Growth, Meridian Systems',
-    },
-    {
-      title: 'GenAI Solutions',
-      quote:
-        'Their GenAI capabilities let our teams prototype in hours instead of weeks. We now ship features faster with higher quality and clearer customer insights.',
-      author: 'Priya Nair | Head of Product, Aurora Finance',
-    },
-  ];
-
-  const [activeTestimonial, setActiveTestimonial] = React.useState<number>(0);
-  const prevTestimonialIndex = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
-  const nextTestimonialIndex = (activeTestimonial + 1) % testimonials.length;
-
   return (
     <div className="min-h-screen bg-white pt-16 md:pt-36">
       {/* Hero Section */}
@@ -271,108 +245,6 @@ const About: React.FC = () => {
               <p className="text-gray-600 text-sm leading-relaxed text-center">
                 We tell you what will work—and what won't—early and clearly.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="pt-24 md:pt-48 pb-24 md:pb-48" style={{ backgroundColor: '#F3FAFD' }}>
-        <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-16">
-          <div className="text-center">
-            <div className="mb-3 md:mb-4">
-              <span className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-gray-500">TESTIMONIALS</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-              What Customers Are Saying
-            </h2>
-          </div>
-
-          {/* Centered carousel with preview cards */}
-          <div className="relative max-w-7xl mx-auto mt-8 md:mt-16 h-[24rem] md:h-[30rem] overflow-hidden">
-            {/* Left preview (previous) - hidden on mobile */}
-            <motion.div
-              key={`left-${prevTestimonialIndex}`}
-              initial={{ opacity: 0, scale: 0.9, x: -40 }}
-              animate={{ opacity: 0.6, scale: 0.92, x: 0 }}
-              transition={{ duration: 0.45 }}
-              className="hidden lg:block absolute left-0 top-1/2 -translate-y-[54%] -translate-x-[55%] w-[32rem] h-[18rem] bg-white rounded-2xl shadow-xl p-6 flex-col justify-center text-center z-10 pointer-events-none"
-            >
-              <div className="mx-auto mb-3 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17a4 4 0 110-8 4 4 0 010 8zm10 0a4 4 0 110-8 4 4 0 010 8z" />
-                </svg>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed line-clamp-4">{testimonials[prevTestimonialIndex].quote}</p>
-              <div className="mt-3 text-xs font-semibold text-gray-500">
-                {testimonials[prevTestimonialIndex].author}
-              </div>
-            </motion.div>
-
-            {/* Center card (active) */}
-            <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none px-4 md:px-0">
-              <motion.div
-                key={`center-${activeTestimonial}`}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.45 }}
-                className="w-full sm:w-[90%] md:w-[46rem] h-auto md:h-[20rem] bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col justify-center text-center"
-              >
-                <div className="mx-auto mb-4 md:mb-5 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 flex items-center justify-center">
-                  <svg className="w-5 h-5 md:w-6 md:h-6 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h.01M15 12h.01M7 20h10a2 2 0 002-2V6a2 2 0 00-2-2H7a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-gray-800 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto">
-                  {testimonials[activeTestimonial].quote}
-                </p>
-                <div className="mt-3 md:mt-4 text-sm font-semibold text-gray-600">
-                  {testimonials[activeTestimonial].author}
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Right preview (next) - hidden on mobile */}
-            <motion.div
-              key={`right-${nextTestimonialIndex}`}
-              initial={{ opacity: 0, scale: 0.9, x: 40 }}
-              animate={{ opacity: 0.6, scale: 0.92, x: 0 }}
-              transition={{ duration: 0.45 }}
-              className="hidden lg:block absolute right-0 top-1/2 -translate-y-[54%] translate-x-[55%] w-[32rem] h-[18rem] bg-white rounded-2xl shadow-xl p-6 flex-col justify-center text-center z-10 pointer-events-none"
-            >
-              <div className="mx-auto mb-3 w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                <svg className="w-5 h-5 text-gray-400" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 17a4 4 0 110-8 4 4 0 010 8zm10 0a4 4 0 110-8 4 4 0 010 8z" />
-                </svg>
-              </div>
-              <p className="text-gray-700 text-sm leading-relaxed line-clamp-4">{testimonials[nextTestimonialIndex].quote}</p>
-              <div className="mt-3 text-xs font-semibold text-gray-500">
-                {testimonials[nextTestimonialIndex].author}
-              </div>
-            </motion.div>
-
-            {/* Nav arrows */}
-            <div className="absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-30">
-              <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveTestimonial(prev => (prev - 1 + testimonials.length) % testimonials.length)}
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full shadow-xl flex items-center justify-center hover:shadow-2xl"
-                style={{ backgroundColor: '#0097B2' }}
-              >
-                <ChevronLeft className="text-white" />
-              </motion.button>
-            </div>
-            <div className="absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-30">
-              <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveTestimonial(prev => (prev + 1) % testimonials.length)}
-                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full shadow-xl flex items-center justify-center hover:shadow-2xl"
-                style={{ backgroundColor: '#0097B2' }}
-              >
-                <ChevronRight className="text-white" />
-              </motion.button>
             </div>
           </div>
         </div>
